@@ -4,7 +4,7 @@ public class PaymentSlip {
     private int hourlyRate;
     private int hours;
 
-    private static final double TaxRate = 0.7;
+    private static final double TaxRate = 0.3;
 
     // default constructor
     public PaymentSlip() {
@@ -51,7 +51,7 @@ public class PaymentSlip {
     }
 
     public double calculateNetSalary(){
-    return calculateSalary() * TaxRate;
+    return calculateSalary() * 1-TaxRate;
     }
 
     // print payment slip
